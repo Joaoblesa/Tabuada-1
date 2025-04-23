@@ -117,10 +117,9 @@ public class TelaTabuada {
 				double maxMultiplicadorDouble = Double.valueOf(maxMultiplicador);
 				tabuada.setMaximoMultiplicador(maxMultiplicadorDouble);
 				
-				System.out.println("Multiplicando " + textMultiplicando.getText());
-				System.out.println("Min.multiplicador " + textMinMultiplicador.getText());
-				System.out.println("Max.Multiplicador " + textMaxMultiplicador.getText());
-				System.out.println("---------------");
+				String[] tabuadaResultado = tabuada.mostrarTabuada();
+				
+				listTabuada.setListData(tabuadaResultado);
 				
 			}
 		});
@@ -132,6 +131,8 @@ public class TelaTabuada {
 				textMaxMultiplicador.setText("");
 				textMinMultiplicador.setText("");
 				textMultiplicando.setText("");
+				
+				listTabuada.setListData(new String[0]);
 				
 				textMultiplicando.requestFocus();
 			}
